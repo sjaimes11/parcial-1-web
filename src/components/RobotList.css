@@ -1,0 +1,71 @@
+.robot-list-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .robot-table {
+    margin: 0 auto;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .robot-table thead th {
+    background-color: #343a40;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .robot-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+  
+  /* RobotList.css */
+
+.robot-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .robot-list {
+    width: 60%;
+  }
+  
+  .robot-detail {
+    width: 35%;
+    padding-left: 20px;
+    border-left: 2px solid #eee;
+  }
+  
+  /* General styling for the table and detail view */
+  .robot-detail-container {
+    text-align: center;
+  }
+  
+  .robot-image {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .robot-info {
+    text-align: left;
+    margin: 20px;
+  }
+  
+  .robot-info p {
+    font-size: 1.2rem;
+  }
+  
