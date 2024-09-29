@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import { IntlProvider } from 'react-intl';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+import App from './App'; // Assuming you have App.js as the main component
+import localeEsMessages from "./locales/es";
+import localeEnMessages from "./locales/en";
+
+// Detect browser language
+const locale = navigator.language.startsWith('es') ? 'es' : 'en';
+const messages = locale === 'es' ? localeEsMessages : localeEnMessages;
+
+ReactDOM.render(
+  <IntlProvider locale={locale} messages={messages}>
     <App />
-  </React.StrictMode>
+  </IntlProvider>, 
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
