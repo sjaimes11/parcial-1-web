@@ -1,22 +1,29 @@
 .robot-detail-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .robot-image {
-    width: 300px;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  .robot-info {
-    text-align: left;
-    margin: 20px;
-  }
-  
-  .robot-info p {
-    font-size: 1.2rem;
-  }
-  
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.robot-image {
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.robot-info {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.robot-info p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.robot-humor {
+  word-wrap: break-word;  /* Permitir que el texto se divida en varias líneas */
+  white-space: normal;    /* Asegurar que el texto no se mantenga en una sola línea */
+  max-height: none;       /* No limitar la altura máxima */
+  overflow: visible;      /* Mostrar todo el contenido */
+}

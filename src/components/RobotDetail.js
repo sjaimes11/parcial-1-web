@@ -10,9 +10,15 @@ function RobotDetail({ robot }) {
       <h1>{robot.nombre}</h1>
       <img className="robot-image" src={imageURL} alt={robot.nombre} />
       <div className="robot-info">
-        <p><strong><FormattedMessage id="robot.detail.year" />:</strong> {robot.añoFabricacion}</p>
-        <p><strong><FormattedMessage id="robot.detail.processing" />:</strong> {robot.capacidadProcesamiento}</p>
-        <p><strong><FormattedMessage id="robot.detail.additional" />:</strong> {robot.humor}</p>
+        <p>
+          <strong><FormattedMessage id="robot.detail.year" defaultMessage="Year of Manufacture" />:</strong> {robot.añoFabricacion}
+        </p>
+        <p>
+          <strong><FormattedMessage id="robot.detail.processing" defaultMessage="Processing Capacity" />:</strong> {robot.capacidadProcesamiento}
+        </p>
+        <p className="robot-humor">
+          <strong><FormattedMessage id="robot.detail.additional" defaultMessage="Humor" />:</strong> {robot.humor}
+        </p>
       </div>
     </div>
   );
