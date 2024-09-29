@@ -1,8 +1,8 @@
 import React from 'react';
-import './RobotDetail.css'; // Custom CSS for styling
+import './RobotDetail.css'; // Estilos personalizados
+import { FormattedMessage } from 'react-intl'; // Importar FormattedMessage para traducción
 
 function RobotDetail({ robot }) {
-  // Construcción dinámica de la URL de la imagen basada en el ID del robot
   const imageURL = `https://raw.githubusercontent.com/fai-aher/T34-Wiki-Backup/main/images/robot${robot.id}.png`;
 
   return (
@@ -10,9 +10,9 @@ function RobotDetail({ robot }) {
       <h1>{robot.nombre}</h1>
       <img className="robot-image" src={imageURL} alt={robot.nombre} />
       <div className="robot-info">
-        <p><strong>Año de Fabricación:</strong> {robot.añoFabricacion}</p>
-        <p><strong>Capacidad de Procesamiento:</strong> {robot.capacidadProcesamiento}</p>
-        <p><strong>Humor:</strong> {robot.humor}</p>
+        <p><strong><FormattedMessage id="robot.detail.year" />:</strong> {robot.añoFabricacion}</p>
+        <p><strong><FormattedMessage id="robot.detail.processing" />:</strong> {robot.capacidadProcesamiento}</p>
+        <p><strong><FormattedMessage id="robot.detail.additional" />:</strong> {robot.humor}</p>
       </div>
     </div>
   );

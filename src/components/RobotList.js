@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
-import './RobotList.css'; // Custom CSS for styling
-import RobotDetail from './RobotDetail'; // Import RobotDetail component
+import './RobotList.css'; // Estilos personalizados
+import RobotDetail from './RobotDetail'; // Componente RobotDetail
+import { FormattedMessage } from 'react-intl'; // Importar FormattedMessage para traducir cadenas
 
 function RobotList() {
   const [robots, setRobots] = useState([]);
-  const [selectedRobot, setSelectedRobot] = useState(null); // State to store selected robot
+  const [selectedRobot, setSelectedRobot] = useState(null); // Estado para almacenar el robot seleccionado
 
   useEffect(() => {
     fetch('http://localhost:3001/robots')
@@ -14,27 +15,29 @@ function RobotList() {
       .catch(error => console.error('Error fetching robots:', error));
   }, []);
 
-  // Function to handle robot selection
+  // Función para manejar la selección del robot
   const handleRobotClick = (robotId) => {
-    const robot = robots.find(r => r.id === robotId); // Find the selected robot by ID
-    setSelectedRobot(robot); // Update the selected robot state
+    const robot = robots.find(r => r.id === robotId); // Buscar el robot seleccionado por ID
+    setSelectedRobot(robot); // Actualizar el estado con el robot seleccionado
   };
 
   return (
     <div className="robot-list-container">
-      <h1 className="text-center">Adopta un Robot con Robot Lovers!</h1>
+      <h1 className="text-center">
+        <FormattedMessage id="app.title" />
+      </h1>
       <img className="banner-image" src="/image 4.png" alt="Robot Banner" />
 
       <div className="robot-content">
-        {/* Robot List */}
+        {/* Lista de Robots */}
         <div className="robot-list">
           <Table striped bordered hover responsive className="robot-table mt-4">
             <thead>
               <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Modelo</th>
-                <th>Empresa Fabricante</th>
+                <th><FormattedMessage id="table.header.id" /></th>
+                <th><FormattedMessage id="table.header.name" /></th>
+                <th><FormattedMessage id="table.header.model" /></th>
+                <th><FormattedMessage id="table.header.manufacturer" /></th>
               </tr>
             </thead>
             <tbody>
@@ -50,18 +53,18 @@ function RobotList() {
           </Table>
         </div>
 
-        {/* Robot Detail */}
+        {/* Detalle del Robot */}
         <div className="robot-detail">
           {selectedRobot ? (
             <RobotDetail robot={selectedRobot} />
           ) : (
-            <p>Seleccione un robot para ver sus detalles</p>
+            <p><FormattedMessage id="robot.select.prompt" /></p>
           )}
         </div>
       </div>
 
       <footer className="text-center mt-4">
-        <p>Contact us: +57 3102105253 - info@robot-lovers.com - @robot-lovers</p>
+        <p><FormattedMessage id="footer.contact" /></p>
       </footer>
     </div>
   );

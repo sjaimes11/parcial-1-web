@@ -1,12 +1,18 @@
 {
-    "app.title": "Adopta un Robot con Robot Lovers!",
-    "table.header.id": "ID",
-    "table.header.name": "Nombre",
-    "table.header.model": "Modelo",
-    "table.header.manufacturer": "Empresa Fabricante",
-    "robot.detail.year": "Año de Fabricación",
-    "robot.detail.processing": "Capacidad de Procesamiento",
-    "robot.detail.additional": "Características adicionales",
-    "footer.contact": "Contáctanos: +57 3102105253 - info@robot-lovers.com - @robot-lovers"
-  }
-  
+  "app.title": "Adopta un Robot con Robot Lovers!",
+  "login.title": "Inicio de sesión",
+  "login.username": "Nombre de usuario",
+  "login.password": "Contraseña",
+  "login.submit": "Ingresar",
+  "login.cancel": "Cancelar",
+  "login.error": "Credenciales inválidas",
+  "table.header.id": "ID",
+  "table.header.name": "Nombre",
+  "table.header.model": "Modelo",
+  "table.header.manufacturer": "Empresa Fabricante",
+  "robot.detail.year": "Año de Fabricación",
+  "robot.detail.processing": "Capacidad de Procesamiento",
+  "robot.detail.additional": "Humor",
+  "footer.contact": "Contáctanos: +57 3102105253 - info@robot-lovers.com - @robot-lovers",
+  "robot.select.prompt": "Seleccione un robot para ver sus detalles"
+}
